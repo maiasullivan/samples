@@ -24,4 +24,6 @@
     g.forEach((r,y)=>r.forEach((v,xx)=>{let p=(y*c+xx)*4;d[p]=d[p+1]=d[p+2]=v*255;d[p+3]=255}))
     x.putImageData(i,0,0)
   },50)
+
+  src(s0).out(o1)  // renders to o1, leaves o0 free
 })()
