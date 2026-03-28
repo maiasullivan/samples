@@ -18,7 +18,7 @@
     g=g.map((r,y)=>r.map((_,xx)=>{
       let n=0
       for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++)if(dx||dy)n+=g[(y+dy+c)%c][(xx+dx+c)%c]
-      return g[y][x]?n==2||n==3?1:0:n==3?1:0
+      return g[y][xx]?n==2||n==3?1:0:n==3?1:0
     }))
     let i=x.createImageData(c,c),d=i.data
     g.forEach((r,y)=>r.forEach((v,xx)=>{let p=(y*c+xx)*4;d[p]=d[p+1]=d[p+2]=v*255;d[p+3]=255}))
